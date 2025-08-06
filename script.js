@@ -218,7 +218,7 @@ function All() {
   productlist.innerHTML = ``;
   products.map((p) => {
     productlist.innerHTML += `
-    <a href="/pages/product.html?name=${p.name}&img=${p.img}&color=${p.color}&qty=${p.qty}&description=${p.description}&price=${p.price}" class="text-decoration-none">
+    <a href="/petbot/pages/product.html?name=${p.name}&img=${p.img}&color=${p.color}&qty=${p.qty}&description=${p.description}&price=${p.price}" class="text-decoration-none">
        <div class="card mb-5" style="width: 350px;">
   <img src="${p.img}" class="card-img-top object-fit-cover" width="400" height="auto" alt="...">
   <div class="card-body">
@@ -237,7 +237,7 @@ function Bottles() {
   productlist.innerHTML = ``;
     products.filter((p) => p.cat === "Bottle").map((p) => {
         productlist.innerHTML += `
-             <a href="/pages/product.html?name=${p.name}&img=${p.img}&color=${p.color}&qty=${p.qty}&description=${p.description}&price=${p.price}" class="text-decoration-none">
+             <a href="/petbot/pages/product.html?name=${p.name}&img=${p.img}&color=${p.color}&qty=${p.qty}&description=${p.description}&price=${p.price}" class="text-decoration-none">
        <div class="card mb-5" style="width: 350px;">
   <img src="${p.img}" class="card-img-top object-fit-cover" width="400" height="auto" alt="...">
   <div class="card-body">
@@ -253,7 +253,7 @@ function Jars() {
   productlist.innerHTML = ``;
     products.filter((p) => p.cat === "Jars").map((p) => {
         productlist.innerHTML += `
-             <a href="/pages/product.html?name=${p.name}&img=${p.img}&color=${p.color}&qty=${p.qty}&description=${p.description}&price=${p.price}" class="text-decoration-none">
+             <a href="/petbot/pages/product.html?name=${p.name}&img=${p.img}&color=${p.color}&qty=${p.qty}&description=${p.description}&price=${p.price}" class="text-decoration-none">
        <div class="card mb-5" style="width: 350px;">
   <img src="${p.img}" class="card-img-top object-fit-cover" width="400" height="auto" alt="...">
   <div class="card-body">
@@ -269,7 +269,7 @@ function Glass() {
   productlist.innerHTML = ``;
     products.filter((p) => p.cat === "Glass").map((p) => {
         productlist.innerHTML += `
-            <a href="/pages/product.html?name=${p.name}&img=${p.img}&color=${p.color}&qty=${p.qty}&description=${p.description}&price=${p.price}" class="text-decoration-none">
+            <a href="/petbot/pages/product.html?name=${p.name}&img=${p.img}&color=${p.color}&qty=${p.qty}&description=${p.description}&price=${p.price}" class="text-decoration-none">
        <div class="card mb-5" style="width: 350px;">
   <img src="${p.img}" class="card-img-top object-fit-cover" width="400" height="auto" alt="...">
   <div class="card-body">
@@ -281,5 +281,6 @@ function Glass() {
 </a>`;
     });
 }
+
 
 
