@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PETBot - Tariq</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/Font-ase.css" />
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar bg-thame navbar-expand-lg" data-bs-theme="dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="assets/img/logo.png"
+              alt="Bootstrap"
+              width="60px"
+              height="auto"
+            />
+            <a class="text-thame fw-bolder fs-2 text-decoration-none">PETBOT</a>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active fs-5 hover-link on-page" href="/index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fs-5 hover-link" href="pages/about.html"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fs-5 hover-link" href="/pages/gallery.html"
+                  >Gallery</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fs-5 hover-link" href="./index.html#faqs">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fs-5 hover-link" href="/pages/contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="/assets/img/dhhf.JPG" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="/assets/img/dd.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="/assets/img/hfgh.JPG" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </header>
+    <div class="text-center mb-5 my-5">
+      <h2 class="display-4">Our Product Range</h2>
+      <p class="lead">
+        High-quality packaging solutions for various industries
+      </p>
+      <div class="btn-group mt-3" role="group">
+        <button
+          type="button"
+          class="btn btn-outline-primary product-filter"
+          onclick="All();"
+        >
+          All Products
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary product-filter"
+          onclick="Bottles();"
+        >
+          Bottles
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary product-filter"
+          onclick="Jars();"
+        >
+          Jars
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary product-filter"
+          onclick="Glass();"
+        >
+          Glass
+        </button>
+      </div>
+    </div>
+    <section
+      class="container-fluid d-flex flex-wrap justify-content-around"
+      id="products"
+    ></section>
+    <div id="faqs" class="container-fluid">
+      <h2 class="display-4 text-center fw-bolder">FAQs</h2>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Q1: <strong>Who delivers Petbot products?</strong>
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              A: All our products are delivered through our trusted logistics
+              partner <strong>P2Max</strong>, ensuring safe and timely shipping
+              across Pakistan.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Q2: <strong>How can I track my order?</strong>
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              A: Once your order is shipped, you’ll receive a
+              <strong>tracking ID via SMS or email</strong>. You can track your
+              shipment directly on the <strong>P2Max tracking portal</strong>.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Q3: <strong>What is Petbot’s return policy?</strong>
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              A: At Petbot, we offer a 3-day return or exchange policy on all
+              products in case of damage, wrong item, or manufacturing defects.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              Q3: <strong>What is Petbot’s return policy?</strong>
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the third item’s accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It’s also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              Q3: <strong>What is Petbot’s return policy?</strong>
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the third item’s accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It’s also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-thame text-light pt-4 pb-3 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3 d-flex align-items-start">
+            <img
+              src="/assets/img/logo.png"
+              alt="PETBOT Logo"
+              width="50"
+              height="auto"
+              class="me-2"
+            />
+            <div>
+              <h5 class="mb-1 text-thame fw-bolder fs-2 text-decoration-none">PETBOT</h5>
+              <p class="mb-0">
+                Hydration Meets Innovation - Eco-smart bottles for every moment.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="/index.html" class="text-light text-decoration-none">Home</a>
+              </li>
+              <li>
+                <a
+                  href="/pages/about.html"
+                  class="text-light text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/contact.html"
+                  class="text-light text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/gallery.html"
+                  class="text-light text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a href="/index.html#faqs" class="text-light text-decoration-none">FAQs</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5 id="Contact">Contact Us</h5>
+            <p>
+              Email:
+              <a
+                href="mailto:support@petbot.com"
+                class="text-light text-decoration-none"
+                >support@petbot.com</a
+              >
+            </p>
+            <p>Phone: +92-123-4567890</p>
+            <div>
+              <a href="#" class="social-icon"><i class="bi"><img src="/assets/icons/facebook.svg" width="28"></i></a>
+              <a href="#" class="social-icon"><i class="bi"><img src="/assets/icons/instagram.svg" width="28"></i></a>
+              <a href="#" class="social-icon"><i class="bi"><img src="/assets/icons/twitter-x.svg" width="28"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-3 border-top pt-2">
+          <small
+            >&copy; 2025 <span class="text-thame">PETBOT</span>. All rights
+            reserved.</small
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>
